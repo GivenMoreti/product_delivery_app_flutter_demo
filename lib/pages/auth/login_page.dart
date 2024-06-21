@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:food_delivery_app/components/my_button.dart';
 import 'package:food_delivery_app/components/my_text_field.dart';
 import 'package:food_delivery_app/pages/home_page.dart';
@@ -40,17 +41,16 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //logo
-            Icon(
-              Icons.lock_open_rounded,
-              size: 60,
+            ClipRRect(
+              child: Image.asset(
+                "images/images1.png",
+                height: 300,
+                width: 300,
+              ),
+              borderRadius: BorderRadius.circular(50),
             ),
 
             // title
-
-            Text(
-              "Food delivery App",
-              style: TextStyle(fontSize: 30),
-            ),
             SizedBox(
               height: 10,
             ),

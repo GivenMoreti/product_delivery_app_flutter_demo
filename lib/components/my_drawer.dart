@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/components/drawer_list_tile.dart';
+import 'package:food_delivery_app/pages/driver_page.dart';
 import 'package:food_delivery_app/pages/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -8,12 +9,14 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.green,
       child: Column(
         children: [
           DrawerHeader(
             child: Icon(
               Icons.image,
               size: 40,
+              color: Colors.white,
             ),
           ),
 
@@ -26,6 +29,19 @@ class MyDrawer extends StatelessWidget {
             },
             tileIcon: Icons.home,
           ),
+          //Drive today
+          DrawerListTile(
+              tileTitle: "Drive now",
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DriverPage(),
+                  ),
+                );
+              },
+              tileIcon: Icons.person),
 
           //settings tile
           DrawerListTile(

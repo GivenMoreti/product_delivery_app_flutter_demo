@@ -16,11 +16,12 @@ class DrawerListTile extends StatelessWidget {
       child: ListTile(
         title: Text(
           tileTitle,
-          style: TextStyle(fontSize: 15),
+          style: TextStyle(fontSize: 15, color: Colors.white),
         ),
         leading: Icon(
           tileIcon,
           size: 30,
+          color: Colors.white,
         ),
         onTap: onTap,
       ),
